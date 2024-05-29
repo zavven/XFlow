@@ -27,7 +27,12 @@ export default () => {
         format: 'umd',
         file: 'dist/index.umd.js',
         sourcemap: true,
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM',
+        },
       },
     ],
+    external: ['react', 'react-dom'],
   };
 };
